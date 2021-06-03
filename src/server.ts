@@ -1,7 +1,6 @@
 import * as dotEnv from 'dotenv';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-// eslint-ignore-next-line
 dotEnv.config();
 import participants from './db/participants';
 
