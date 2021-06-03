@@ -8,7 +8,7 @@ const devConnectionString =
 
 const config = {
   connectionString: env === 'development' ? devConnectionString : process.env.DATABASE_URL,
-  ssl: env === 'production'
+  ssl: env === 'production' ? { rejectUnauthorized: false } : false
 };
 const pool = new Pool(config);
 
